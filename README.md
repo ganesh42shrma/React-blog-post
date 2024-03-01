@@ -80,3 +80,17 @@ The purpose of each file/component is to contribute to the overall structure, fu
   
 **Purpose:**
 This file sets up a reusable Axios instance with a base URL pointing to 'http://localhost:5000'. It simplifies API calls in the React app, providing a centralized configuration for making requests to the specified server. This can enhance code organization and maintainability by isolating API-related logic.
+
+**useAxiosFetch.js (Custom Hook for Data Fetching):**
+- File in the hooks folder of the React app.
+- Imports useState, useEffect from 'react', and axios for making HTTP requests.
+- Defines a custom hook named useAxiosFetch that takes a dataUrl as a parameter.
+- Uses state variables (data, fetchError, isLoading) to manage fetched data, fetch errors, and loading state.
+- Inside the useEffect hook, sets up a cancel token to handle component unmounting.
+- Fetches data from the specified URL using axios.get.
+- Updates state variables based on the success or failure of the fetch operation.
+- Implements cleanup logic to cancel the request and prevent memory leaks upon component unmounting.
+- Returns an object with data, fetchError, and isLoading to be used in the consuming components.
+
+**Purpose:**
+This custom hook simplifies data fetching in React components by encapsulating the logic related to HTTP requests. It provides a clean interface for components to initiate data fetching, handle loading states, and manage the fetched data or errors. The use of cancel tokens in conjunction with useEffect ensures efficient cleanup and avoids potential issues with asynchronous operations during component unmounting.
