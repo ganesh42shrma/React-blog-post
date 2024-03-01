@@ -94,3 +94,18 @@ This file sets up a reusable Axios instance with a base URL pointing to 'http://
 
 **Purpose:**
 This custom hook simplifies data fetching in React components by encapsulating the logic related to HTTP requests. It provides a clean interface for components to initiate data fetching, handle loading states, and manage the fetched data or errors. The use of cancel tokens in conjunction with useEffect ensures efficient cleanup and avoids potential issues with asynchronous operations during component unmounting.
+
+**useWindowSize.js (Custom Hook for Window Size):**
+- File in the hooks folder of the React app.
+- Imports useState and useEffect from "react".
+- Defines a custom hook named useWindowSize with no parameters.
+- Uses state variable windowSize to store the current width and height of the window.
+- Inside the useEffect hook:
+  - Defines a function handleResize to update windowSize based on the current window dimensions.
+  - Calls handleResize once to set initial window size.
+  - Adds an event listener for the "resize" event to dynamically update windowSize on window resizing.
+  - Implements cleanup logic to remove the event listener when the component unmounts.
+- Returns an object containing the width and height of the window.
+
+**Purpose:**
+This custom hook provides a straightforward way for React components to access and track the current dimensions of the browser window. By encapsulating window size logic in a reusable hook, it promotes cleaner and more modular code. Components using this hook can efficiently respond to changes in window size without cluttering their code with event listeners and resize logic.
