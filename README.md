@@ -71,3 +71,12 @@
 - Purpose: Centralized store for managing application state.
 
 The purpose of each file/component is to contribute to the overall structure, functionality, and user experience of the React blog post application, with a focus on modularity and easy maintenance.
+
+**posts.js (API Configuration):**
+- File in the API folder of the React app.
+- Contains an import statement for Axios, a popular HTTP client for the browser and Node.js.
+- Exports an instance of Axios created with `create` method.
+- Configures the base URL for the Axios instance to be 'http://localhost:5000'.
+  
+**Purpose:**
+This file sets up a reusable Axios instance with a base URL pointing to 'http://localhost:5000'. It simplifies API calls in the React app, providing a centralized configuration for making requests to the specified server. This can enhance code organization and maintainability by isolating API-related logic.
