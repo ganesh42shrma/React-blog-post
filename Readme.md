@@ -1,6 +1,4 @@
-Certainly! Here's a template for a README file that explains the purpose of your app, how to use it, and its features:
 
-```markdown
 # React Blog Post App
 
 ## Purpose of the App
